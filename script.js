@@ -21,15 +21,7 @@ if (!approved) {
 dropZone.addEventListener("dragover", () => dropZone.classList.add("drop-zone-hover"))
 dropZone.addEventListener("dragleave", () => dropZone.classList.remove("drop-zone-hover"))
 
-codeWrapperResetBtn.addEventListener("click", () => {
-    code.innerText = "";
-    codeShower.classList.remove("code-shower")
-    message.innerText = ""
-    reviewBoxes[0].querySelector("p").innerText = ""
-    reviewBoxes[1].querySelector("ul").innerHTML = ""
-    reviewBoxes[2].querySelector("p").innerText = ""
 
-})
 
 const constructCodeDiv = (text, review) => {
     codeShower.classList.add("code-shower")
@@ -120,3 +112,13 @@ dropZone.addEventListener("drop", (e) => {
     [...e.dataTransfer.items].forEach((item, i) => handleFile(item));
   }
 });
+
+codeWrapperResetBtn.addEventListener("click", () => {
+  code.innerText = "";
+  codeShower.classList.remove("code-shower")
+  message.innerText = ""
+  reviewBoxes[0].querySelector("p").innerText = ""
+  reviewBoxes[1].querySelector("ul").innerHTML = ""
+  reviewBoxes[2].querySelector("p").innerText = ""
+  setLoadingState(false)
+})
