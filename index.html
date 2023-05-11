@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kodrecenseraren 3000</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Open+Sans:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d09c5fb3f1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <dialog>
+        <p>
+          Jag godkänner att koden jag lägger in skickas in till ChatGPT, ägaren
+          av denna sida tar inget ansvar för vad som händer med koden sen.
+        </p>
+        <button>Jag godkänner</button>
+      </dialog>
+
+      <div class="drop-zone">
+        <p>Dra hit en kodfil, max 10000 tecken! <i class="fa-solid fa-upload"></i></p>
+      </div>
+
+      <button>Återställ</button>
+      <p class="message"></p>
+
+      <div class="review-box description">
+        <h4>Beskrivning av kod <i class="fa-solid fa-file-prescription"></i></h4>
+        <p></p>
+      </div>
+      <div class="review-box suggestions">
+        <h4>Förslag <i class="fa-solid fa-hand-holding-hand"></i></h4>
+        <ul></ul>
+      </div>
+
+      <div class="review-box score">
+        <h4>Betyg 1-10 <i class="fa-regular fa-star-half-stroke"></i></h4>
+        <p></p>
+      </div>
+
+      <div class="code-shower-wrapper">
+        <div>
+          <pre>
+                    <code>
+                        
+                    </code>
+                </pre>
+        </div>
+
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

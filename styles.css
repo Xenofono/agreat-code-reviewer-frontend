@@ -1,0 +1,132 @@
+body {
+    background: linear-gradient(90deg, rgb(231, 44, 51) 0%, rgb(0, 144, 156) 100%);
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+dialog::backdrop {
+    background: rgba(0,0,0,0.2);
+}
+
+i {
+    color: rgb(0, 144, 156);
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+h4 i {
+    color: rgb(231, 44, 51);
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.container {
+    grid-template-areas: 
+    "drop drop drop"
+    "reset message placeholder"
+    "description suggestions score"
+    "output output output"
+    "output output output";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 100px fit-content(1fr) 1fr 1fr;
+    margin: 2rem;
+    gap:1rem;
+}
+
+h4{
+    color: white;
+    text-align: center;
+}
+
+.drop-zone {
+    border: 1px solid black;
+    background-color: rgba(255,255,255);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 2;
+    transition: transform 0.2s;
+}
+
+.drop-zone:hover {
+    transform: scale(1.1);
+    border: 2px solid rgb(231, 44, 51);
+}
+
+.drop-zone-hover {
+    transform: scale(1.1);
+    border: 2px solid rgb(231, 44, 51);
+}
+
+.review-box{
+    background-color: rgba(255,255,255, 0.2);
+    color: white;
+    padding: 1rem;
+}
+
+.review-box p{
+    text-align: center;
+}
+
+.review-box ul {
+    list-style-type: none;
+}
+
+.review-box li {
+    margin: 1rem 0;
+}
+
+.description {
+    grid-area: description;
+}
+
+.suggestions {
+    grid-area: suggestions;
+}
+
+.score {
+    grid-area: score;
+}
+
+.code-shower-wrapper{
+    grid-area: output;
+    width: 100%;
+    height: 100%;
+}
+
+.code-shower {
+    grid-area: output;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+}
+
+button{
+    width: 10rem;
+    background: rgb(0, 144, 156);
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1.5px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    transition: transform 0.2s;
+    grid-area: reset;
+    height: 3rem;
+}
+
+.message {
+    grid-area: message;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+button:hover{
+   transform: scale(1.1);
+}
+
